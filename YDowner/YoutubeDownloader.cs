@@ -8,7 +8,7 @@ using YoutubeExplode.Videos.Streams;
 using NAudio.Wave;
 using NAudio.Lame;
 
-namespace YDowner
+namespace YDownerLibrary
 {
     public class YoutubeDownloader
     {

@@ -31,8 +31,10 @@
             txtUrls.Multiline = true;
             txtUrls.Name = "txtUrls";
             txtUrls.PlaceholderText = "Enter YouTube video URLs, one per line";
+            txtUrls.ScrollBars = ScrollBars.Both;
             txtUrls.Size = new Size(460, 150);
             txtUrls.TabIndex = 0;
+            txtUrls.KeyDown += txtUrls_KeyDown;
             // 
             // txtDownloadPath
             // 
@@ -41,7 +43,7 @@
             txtDownloadPath.PlaceholderText = "Enter download path";
             txtDownloadPath.Size = new Size(460, 23);
             txtDownloadPath.TabIndex = 1;
-            txtDownloadPath.Click += this.txtDownloadPath_Click;
+            txtDownloadPath.Click += txtDownloadPath_Click;
             // 
             // btnDownload
             // 
@@ -65,13 +67,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 261);
+            ClientSize = new Size(484, 263);
             Controls.Add(lblStatus);
             Controls.Add(btnDownload);
             Controls.Add(txtDownloadPath);
             Controls.Add(txtUrls);
+            MaximizeBox = false;
             Name = "YouTubeDownloader";
             Text = "YouTube Downloader";
+            TopMost = true;
             ResumeLayout(false);
             PerformLayout();
         }
